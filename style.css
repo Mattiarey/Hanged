@@ -1,0 +1,23 @@
+body{
+    /*da cambiare in seguito*/
+    background-color: green;
+}
+.pagina {
+  display: grid;
+  grid-template-columns: auto auto;
+  /*da togliere in seguito*/
+  background-color: #2196F3;
+  padding: 10px;
+  width: fit-content;
+  height: 70vh;
+  margin: auto;
+}
+.oggetto {
+    /*da cambiare in seguito*/
+    background-color: yellow;
+    /*da togliere in seguito*/
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
