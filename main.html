@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,22 @@
     <script src="script.js"></script>
     <title>Impiccato</title>
 </head>
+
 <body>
     <!--<div class="intestazione">
         <h1>Rey Mattia</h1>
     </div>-->
     <div class="pagina">
-        <div class="oggetto"></div>
-        <div class="oggetto"></div>
+        <div class="oggetto">
+            <!--Qui ci vanno le varie immagini-->
+        </div>
+        <div class="oggetto" id="destra">
+            <input type="text" readonly value="" id="id_parola"><br>
+            <!--fare una funzioncina che cambia il valore del placeholder-->
+            <input type="text" value="" placeholder="a" id="id_lettera">
+            <input type="button" value="fatto" id="id_bottone" onclick="done()">
+        </div>
     </div>
 </body>
+
 </html>

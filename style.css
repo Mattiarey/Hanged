@@ -20,4 +20,14 @@ body{
     padding: 20px;
     font-size: 30px;
     text-align: center;
-  }
+}
+#id_lettera{
+    width: 1ch;
+}
+#destra{
+    /*centrare verticalmente alla fine*/
+    padding: 20vh 10px;
+}
+#id_parola{
+    text-align: center;
+}
