@@ -11,7 +11,6 @@ function done() {
     lettera = lettera.toLowerCase()
 
 
-    parolona = document.getElementById("id_parola").value
     if (lettera == "") { alert("devi scrivere almeno una lettera") }
     else {
         canContinue = true;
@@ -26,16 +25,24 @@ function done() {
                     tempstring += lettera
                     isWordHere = true
                 }
-                else { tempstring += document.getElementById("id_parola").value[i] }     //qui non si deve aggiungere un trattino, ma il carattere preciso della stringa originale
+                else {
+
+                    //qui non si deve aggiungere un trattino, ma il carattere preciso della stringa originale
+                    tempstring += document.getElementById("id_parola").value[i]
+                    //funziona, solo che fa un po' di casino con i trattini, credo si dato dal fatto che ci sono gli spazi
+                    //ho paura di dover ricorrere ai trattini in mezzo invece che a quelli in basso
+                }
+                
             } else {
                 canContinue = false
+                tempstring = document.getElementById("id_parola").value
+                //c'è un problemino se la lettera non c'è
             }
         }
         document.getElementById("id_parola").value = tempstring
 
-
-        if(!isWordHere){
-        //fare tuttecose con l'immagine
+        if (!isWordHere) {
+            //fare tuttecose con l'immagine
         }
     }
 }
@@ -50,7 +57,7 @@ function generazione() {
 
     let trattini = "";
     for (i = 0; i < arrayStringhe[numero].length; i++) {
-        trattini += "_ "
+        trattini += "-"
     }
     document.getElementById("id_parola").value = trattini
 }
