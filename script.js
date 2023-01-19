@@ -15,15 +15,27 @@ function done() {
     if (lettera == "") { alert("devi scrivere almeno una lettera") }
     else {
         canContinue = true;
+        let tempstring = ""
+
+        let isWordHere = false
+
+        //l'idea è che si crei una stringa con la lettera richiesta nelle posizioni dove dovrebbe essere e con i trattini dove non dovrebbe essere
         for (i = 0; i < parola.length && canContinue; i++) {
             if (parola.indexOf(lettera) != -1) {
                 if (parola[i] == lettera) {
-
-                    //per qualche motivo non cambia
-                    //devo creare una stringa identica con le lettere già cambiate e poi rimpiazzrla
-                    document.getElementById("id_parola").value[i] = lettera
+                    tempstring += lettera
+                    isWordHere = true
                 }
-            } else canContinue = false
+                else { tempstring += document.getElementById("id_parola").value[i] }     //qui non si deve aggiungere un trattino, ma il carattere preciso della stringa originale
+            } else {
+                canContinue = false
+            }
+        }
+        document.getElementById("id_parola").value = tempstring
+
+
+        if(!isWordHere){
+        //fare tuttecose con l'immagine
         }
     }
 }
